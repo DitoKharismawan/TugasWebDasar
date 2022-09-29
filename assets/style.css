@@ -10,6 +10,11 @@ html {
   font-size: 62.5%;
   font-family: 'Quicksand', sans-serif;
   scroll-behavior: smooth;
+  
+}
+body{
+  overflow-x: hidden;
+ 
 }
 
 li {
@@ -30,10 +35,11 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 10px 5% 10px 5%;
   top: 0;
   z-index: 1;
   position: sticky;
+  min-height: 80px;
 }
 .menu {
   display: none;
@@ -148,6 +154,45 @@ section h1 {
   font-size: 4rem;
 }
 
+.slides{
+  width: 100%;
+  position: relative;
+}
+.slides .slide{
+  display: none;
+}
+.slides .slide img{
+  width: 100%;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+.slides .navigation{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.slides .navigation .prev, .slides .navigation .next{
+  cursor: pointer;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  color:white;
+  background: rgba(0, 0, 0, 0.2);
+  user-select: none;
+  transition: 0.6s ease;
+}
+.slides .navigation .prev:hover, .slides .navigation .next:hover{
+  background: rgba(0,0,0,1);
+}
+
+@keyframes fade{
+  from {opacity:0.3}
+  to {opacity: 1}
+}
 /* Media Query untuk Javascript */
 @media only screen and (max-width: 768px) {
   .nav-menu {
