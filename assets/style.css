@@ -26,10 +26,11 @@ a {
   text-decoration: none;
   font-size: 30px;
 }
-.container{
- width: 100%;
- 
-  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)),url(image/bg-img2.jpg);
+.container {
+  width: 100%;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+    url(image/bg-img2.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -45,25 +46,28 @@ nav {
   position: fixed;
   top: 0;
 
-background: linear-gradient(90deg, rgba(222,255,242,1) 1%, rgba(209,251,232,0.8942927512801996) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 255, 242, 1) 1%,
+    rgba(209, 251, 232, 0.8942927512801996) 100%
+  );
   border-radius: 10px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5% 10px 5%;
+  z-index: 1;
+  position: sticky;
+  min-height: 80px;
+  align-items: center;
 }
 main {
   padding: 20px;
   overflow: auto;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding:   10px 5% 10px 5%;
-  z-index: 1;
-  position: sticky;
-  min-height: 80px;
-  align-items: center;
-
-}
 .menu {
   display: none;
 }
@@ -90,7 +94,6 @@ main {
 
 .nav-item {
   margin-left: 5rem;
- 
 }
 
 .nav-link {
@@ -114,9 +117,9 @@ main {
   color: rgb(144, 250, 250);
 }
 
-.nav-logo img{
+.nav-logo img {
   float: left;
-  justify-content: space-between; 
+  justify-content: space-between;
   height: 50px;
 }
 .dropbtn {
@@ -194,8 +197,8 @@ section h1 {
   animation-name: fade;
   animation-duration: 1s;
   border-radius: 10px;
- margin: 0px 10px 5px 0px;
- padding: 1px;
+  margin: 0px 10px 5px 0px;
+  padding: 1px;
 
   display: inline;
 }
@@ -293,52 +296,62 @@ section h1 {
     transform: translateY(-8px) rotate(-45deg);
   }
 }
-footer{
+footer {
   padding: 15px;
-  background-color:  #417489;
+  background-color: #417489;
   font-size: 2.5em;
   justify-content: center;
   text-align: center;
   font-weight: 16px;
-  color:#ffff;
+  color: #ffff;
 }
 
-.card-list{
-  width: auto;
-  height: auto;
+.card-list {
   display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(500px,10fr));
-  grid-gap: 10em;
+  grid-template-columns: minmax(300px,1fr);
+  grid-gap: 5px;
+  justify-content: center;
+  margin: 2rem;
+}
+@media screen and (min-width:500px){
+  .card-list{
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
+@media screen and (min-width:760px){
+  .card-list{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .card,
 .card-body,
-.card-footer{
+.card-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card{
+.card {
   border-radius: 18px;
   background: #ffff;
-  box-shadow: 4px 4px 25px rgba(0,0,0,0.4);
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.4s;
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.05);
-  box-shadow: 4px 4px 25px rgba(0,0,0,0.4);
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.4);
 }
-.card-image{
+.card-image {
   display: block;
   position: relative;
   height: 180px;
   max-width: 100%;
 }
-.card-image img{
+.card-image img {
   max-height: 100%;
   width: 100%;
   background-size: cover;
@@ -346,25 +359,25 @@ footer{
 .card-body {
   padding: 20px 20px;
 }
-.card-body .date{
+.card-body .date {
   font-weight: bolder;
 }
-.card-body h2{
+.card-body h2 {
   font-size: 1.8em;
   margin: 2px auto 12px;
 }
-.card-body p{
+.card-body p {
   color: gray;
   font-size: 1.1em;
   line-height: 22px;
   text-align: center;
 }
-.card-footer{
+.card-footer {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.card-footer .info{
+.card-footer .info {
   font-size: 0.9em;
   padding: 10px;
   display: flex;
@@ -372,31 +385,113 @@ footer{
   flex-direction: column;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-.card-footer .info:last-child{
+.card-footer .info:last-child {
   border: none;
 }
-.card-footer .info .type{
+.card-footer .info .type {
   text-transform: uppercase;
   margin-top: 2px;
   font-size: 0.8em;
 }
-.card:nth-child(1) .card-footer{
-  background: #cbfb0f;
+.card:nth-child(1) .card-footer {
+  background: #00ae82;
 }
-.card:nth-child(1) .date{
-  color: #cbfb0f;
+.card:nth-child(1) .date {
+  color: #00ae82;
 }
 
-.card:nth-child(2) .card-footer{
+.card:nth-child(2) .card-footer {
   background: #096fff;
 }
-.card:nth-child(2) .date{
+.card:nth-child(2) .date {
   color: #096fff;
 }
 
-.card:nth-child(3) .card-footer{
+.card:nth-child(3) .card-footer {
   background: #09fa1d;
 }
-.card:nth-child(3) .date{
+.card:nth-child(3) .date {
   color: #09fa1d;
+}
+
+.h-form-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.form-container{
+  padding: 40px 50px 40px 50px;
+  background-image: linear-gradient(45deg, #4fd2d8, #4fd2d8) ;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+ height: 60%;
+ width: 50%;
+}
+.h-form-container .form-container .heading h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.h-form-container .form-container .input_box input{
+  background:transparent;
+  width: 100%;
+  border:none;
+  border-bottom: 2px solid rgba(255,255,255,0.24);
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 13px;
+  padding: 4px 0px 4px 25px;
+  height: 33px;
+  transition: 0.8s all;
+  display: relative;
+}
+.h-form-container .form-container .input_box textarea{
+  background:transparent;
+  width: 100%;
+  border:none;
+  border-bottom: 2px solid rgba(255,255,255,0.24);
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 13px;
+  padding: 4px 0px 4px 25px;
+  transition: 0.8s all;
+  display: relative;
+}
+
+.h-form-container .form-container .input_box input:focus,
+.h-form-container .form-container .input_box textarea:focus{
+  outline:none;
+  border-color:#fff;
+}
+.h-form-container .form-container .input_box{
+  position: relative;
+}
+.h-form-container .form-container .input_box .icon{
+  position: absolute;
+  height: 33px;
+  color:#fff;
+  line-height: 33px;
+}
+.h-form-container .form-container .submit button{
+  border: none;
+  outline: none;
+  width: 100%;
+  background: #fff;
+  color: #555;
+  height: 40px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media only screen and (min-width:300px){
+.h-form-container .form-container .input_box{
+  position: relative;
+  display: absolute;
+}
 }
