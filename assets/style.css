@@ -382,7 +382,7 @@ footer {
 }
 .card-body p {
   color: gray;
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 22px;
   text-align: center;
 }
@@ -514,8 +514,10 @@ footer {
 #about {
   width: 100%;
   min-height: 100vh;
-  background-color: #ddd;
+  background-color: #c8ffd4;
   margin: auto;
+  border-radius: 5px;
+  padding: 40px 50px 40px 50px;
 }
 .container-about {
   width: 80%;
@@ -549,13 +551,14 @@ footer {
   color: #fff;
   font-size: 25px;
   letter-spacing: 1.5px;
+  border-radius: 13px;
 }
 .content .button a:hover {
-  background-color: #a52a2a;
+  background-color: #417489;
   color: #fff;
 }
 .content .social i {
-  color: #a52a2a;
+  color: #417489;
   font-size: 30px;
   padding: 0px 10px;
 }
@@ -584,4 +587,33 @@ footer {
   .content .social {
     text-align: center;
   }
+}
+.card-profile {
+  width: 150px;
+  heigth: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 15px 35px -15px rgba (0, 0, 0, 0.5);
+  position: relative;
+}
+
+.card-profile img {
+  width: 100%;
+  transform: scale(1.2);
+}
+.aside-section {
+  position: absolute;
+  right: 0;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 8px 0 rgba (0, 0, 0, 0.15);
+  padding: 16px 20px;
+  margin: 16px 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: right;
 }
